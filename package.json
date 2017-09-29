@@ -1,0 +1,15 @@
+{
+  "name": "clone-changed",
+  "version": "1.0.0",
+  "description": "Clone a object and compare if's change or not, i use to compare objects forms in Angular 4",
+  "main": "clone-changed.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "keywords": [
+    "clone",
+    "changed"
+  ],
+  "author": "Raphael Kieling Tondin",
+  "license": "ISC"
+}
