@@ -1,11 +1,13 @@
 var CloneChange = function(objectReferenceOriginal){
 	if(!objectReferenceOriginal)
 		throw new Error('Object Original for reference is required');
-
-	this.objectReferenceOriginal = objectReferenceOriginal;
+		
+	this.objectReferenceOriginal = JSON.parse(JSON.stringify(objectReferenceOriginal));
 }
 
-
+function SetConfig(paramsConfig){
+	CloneChange.prototype._spec = paramsConfig['spec'];
+}
 CloneChange.prototype.Backup = function(){
 	return this.objectReferenceOriginal;
 }
@@ -32,7 +34,7 @@ CloneChange.prototype.Expect = function(propsNameArray,propsNameExpect){
 }
 
 CloneChange.prototype.Reset=function(newObjectReferenceOriginal){
-	this.objectReferenceOriginal = newObjectReferenceOriginal;
+	this.objectReferenceOriginal = JSON.parse(JSON.stringify(newObjectReferenceOriginal));
 }
 
 CloneChange.prototype._getPropByString=function(object,parameterStringDotNotation){
