@@ -6,14 +6,6 @@ var CloneChange = function(objectReferenceOriginal){
 }
 
 
-// var FormValidation= function(objectReferenceOriginal){
-// 	if(!objectReferenceOriginal)
-// 		throw new Error('Object Original for reference is required');
-
-// 	this.objectReferenceOriginal = objectReferenceOriginal;
-// }
-
-
 CloneChange.prototype.Backup = function(){
 	return this.objectReferenceOriginal;
 }
