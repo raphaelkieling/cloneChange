@@ -27,7 +27,7 @@ let objectNew ={
   }
 }
 
-cloneChange.IsDirty(objectNew) //compare object with object objectNew and return false
+cloneChange.IsDirty(objectNew) //compare object with object objectNew and return true
 
 cloneChange.Expect(['job.name'],['Developer']); //return true
 cloneChange.Expect(['job.name'],['Dev']);   //return false
